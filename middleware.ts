@@ -1,12 +1,12 @@
-// ===== middleware.ts (na raiz do projeto) =====
-import { updateSession } from '@/lib/supabase/middleware'
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
 
-export async function middleware(request: Request) {
-  return await updateSession(request)
+export function middleware(request: NextRequest) {
+  // Middleware simplificado - sem Supabase por enquanto
+  console.log('Route:', request.nextUrl.pathname)
+  return NextResponse.next()
 }
 
 export const config = {
-  matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
-  ],
+  matcher: ['/dashboard/:path*']
 }
