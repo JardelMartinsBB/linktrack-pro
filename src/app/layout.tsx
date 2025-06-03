@@ -1,4 +1,3 @@
-// ===== src/app/layout.tsx =====
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -6,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'LinkTrack Pro - Encurtador de URLs',
-  description: 'Encurte seus links e acompanhe estatísticas detalhadas',
+  title: 'LinkTrack Pro',
+  description: 'URL Shortener com Analytics',
 }
 
 export default function RootLayout({
