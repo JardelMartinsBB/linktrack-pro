@@ -1,3 +1,4 @@
+// ===== src/app/layout.tsx (LIMPO) =====
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -5,8 +6,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'LinkTrack Pro',
-  description: 'URL Shortener com Analytics',
+  title: 'LinkTrack Pro - URL Shortener',
+  description: 'Encurtador de URLs com analytics avançados',
+  keywords: ['url shortener', 'analytics', 'links', 'tracking'],
 }
 
 export default function RootLayout({
@@ -16,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div id="root">
+          {children}
+        </div>
+      </body>
     </html>
   )
 }
